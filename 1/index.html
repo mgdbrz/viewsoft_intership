@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="first class ">
+    <meta name="keywords" content="education , html , bootstrap">
+
+
+    <link href="assest/bootstratp/css/bootstrap-reboot.css" rel="stylesheet">
+    <!-- <link href="assest/bootstratp/css/bootstrap.css" rel="stylesheet">   -->
+    <link href="assest/bootstratp/css/bootstrap.rtl.css" rel="stylesheet">
+    <link href="assest/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+
+
+
+
+    <title>first class</title>
+
+    <style>
+        .gherteleng {
+
+            background-position: 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            background-image: url('assest/img/Untitled-2.png');
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container bg-primary" style="height: 100vh;">
+
+
+        <input type="text" id="name" placeholder="نامخود را وارد نمایید">
+        <input type="button" onclick="mm()" class="btn btn-success" value="بزنی رو من فحشت میدم">
+
+
+    </div>
+
+
+
+
+
+
+
+    <script>
+
+
+        function mm() {
+            var txtName = document.getElementById('name');
+            if (txtName.value >20)
+                alert('نمره حداکثر 20')
+            else
+            alert('نمره شما ثبت شد');
+
+        }
+
+
+
+        //this is define variable by class = > get cards
+        var cards = Array.from(document.getElementsByClassName('card'))
+        var cards_header = Array.from(document.getElementsByClassName('card-header'))
+
+        cards.forEach((element) =>
+            element.addEventListener('click', () => {
+                ///حذف کلاس تمامی هدر ها     
+                cards_header.forEach((el) => el.classList.remove('gherteleng'))
+                var t = Array.from(element.getElementsByClassName('card-header'));
+
+                t[0].classList.add('gherteleng')
+            })
+        );
+
+
+        // var cards_header = document.getElementsByClassName('card-header');
+        // for (var i = 0; i < cards.length; i++) {
+
+        //     cards[i].addEventListener('click', (e) => {
+
+        //         for (var j = 0; j < cards_header.length; j++) {
+        //             cards_header[j].classList.remove('gherteleng')
+        //         }
+        //         var targetElement =
+        //          e.getElementsByClassName('card-header');
+
+        //         targetElement = Array.from(targetElement);
+        //         if (targetElement.length)
+        //             targetElement.classList.add('gherteleng');
+        //     })
+
+
+        // }
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
